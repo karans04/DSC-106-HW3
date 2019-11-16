@@ -1,13 +1,144 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <!-- Internal stylesheet import -->
-    <link rel="stylesheet" href="main.css">
-    <!-- External Script -->
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  </head>
-  <body>
-   
-    <script src="dashboard.js"></script>
-  </body>
-</html>
+<document>
+    <head></head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <link rel="stylesheet", href="main.css">
+
+        <table>
+            <tr>
+                <td>
+                    <img src="assets/homer.png" height = 45px/>
+                </td>
+
+                <td>
+                    <h1 id ='top'>Energy</h1>
+                </td>
+                <td>
+                    <h1><pre> </pre></h1>
+                </td>
+
+                <td>
+                    <h1 id = 'top'>Springfield</h1>
+                </td>
+            </tr>
+        </table>
+
+    <body>
+        <div id="fullTable">
+            <table border = 0 class="canvas">
+                <tr>
+                    <td class="table_body" rowspan="2">
+                        <table id="DashboardChartElem" class="content">
+                            <tr style="height: 55%;">
+                                <td id="generated" class="chart"></td>
+                            </tr>
+                            <tr style="height: 25%;">
+                                <td id="price" class="chart"></td>
+                            </tr>
+                            <tr>
+                                <td id="temp" class="chart"></td>
+                            </tr>
+
+                        </table>
+                    </td>
+                    <td id="legendCell">
+                      <table id="legend" class="legend" border=0>
+                            <tr id="header">
+                                <td class="title"></td>
+                                <td class="summed"><b>Power</b></td>
+                                <td class="percentage"><b>Contribution</b></td>
+                                <td class="price"><b>Av. Value</b></td>
+                            </tr>
+
+                            <tr id="sources">
+                                <td class="title"><b>Sources</b></td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price"></td>
+                            </tr>
+
+                            <tr id="wind">
+                                <td class="title"><div class='box wind'></div>Wind</td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price">-</td>
+                            </tr>
+
+                            <tr id="hydro">
+                                <td class="title"><div class='box hydro'></div>Hydro</td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price">-</td>
+                            </tr>
+
+                            <tr id="gas_ccgt">
+                                <td class="title"><div class='box gas'></div>Gas (CCGT)</td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price">-</td>
+                            </tr>
+
+                            <tr id="distillate">
+                                <td class="title"><div class='box distillate'></div>Distillate</td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price">-</td>
+                            </tr>
+
+                            <tr id="black_coal">
+                                <td class="title"><div class='box coal'></div>Black Coal</td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price">-</td>
+                            </tr>
+
+                            <tr id="loads">
+                                <td class="title"><b>Loads</b></td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price"></td>
+                            </tr>
+
+                            <tr id="exports">
+                                <td class="title"><div class='box exports'></div>Exports</td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price">-</td>
+                            </tr>
+
+                            <tr id="pumps">
+                                <td class="title"><div class='box pumps'></div>Pumps</td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price">-</td>
+                            </tr>
+                            
+                            <tr id="net">
+                                <td class="title"><b>Net</b></td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price"></td>
+                            </tr>
+
+                            <tr id="renewables">
+                                <td class="title"><b>Renewables</b></td>
+                                <td class="summed"></td>
+                                <td class="percentage"></td>
+                                <td class="price"></td>
+                            </tr>
+
+                        </table>
+                        
+                    </td>
+                </tr>
+                    <td id="pieChart" class="content" ></td>
+                    <tr>
+                    <td id="barChart" class="content" ></td></tr>
+            </table>
+        </div>
+
+        <script src="dashboard.js"></script>
+
+    </body>
+</document>

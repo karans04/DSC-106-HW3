@@ -1,3 +1,26 @@
+.wind{
+    background-color: #437605;
+  }
+.coal{
+    background-color: #130F10;
+}
+.distillate{
+    background-color: #EA4D33;
+}
+.gas{
+    background-color: #F5B361;
+}
+.hydro{
+    background-color: #4383BA;
+}
+.exports{
+    background-color: #845C98;
+}
+.pumps{
+    background-color: #6B9DBC;
+}
+
+
 .simpleTable {
     width: 90%;
     margin-left: 5%;
@@ -5,21 +28,47 @@
     margin-bottom: 10px;
     margin-top: 10px;
 }
-
 .greaterArea tr td { 
     border: 1px solid black;
     width:70%; 
 }
 
-#pieGrid {
+#pieChart {
     width:100%;
     height:100%;
     min-height:250px;
 }
-.zc-ref {
-    display: none;
+
+
+#top{
+    Font-family: "Times New Roman", Times, serif;
 }
 
-.pageLogo {
-    height: 75px;
+#DashboardChartElem{
+    width: 1000px; 
+    height: 700px;
 }
+
+body{
+    background-color: #ece9e6
+}
+/* .title, .summed, .percentage, .price {
+    border-bottom: 1px solid #a9a9a9;
+} */
+
+#legend{
+    font-family: "Times New Roman", Times, serif;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+}
+.box {
+    float: left;
+    height: 10px;
+    width: 10px;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    display : flex;
+    align-items : center;
+    clear: both;
+  }
